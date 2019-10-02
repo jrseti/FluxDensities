@@ -17,28 +17,28 @@ Highcharts (https://www.highcharts.com/) is used to create the graph.
 
 The following sources can be specified:
 
-J0133-3629
-3C48
-Fornax A
-3C123
-J0444-2809
-3C138
-Pictor A
-Taurus A
-3C147
-3C196
-Hydra A
-Virgo A
-3C286
-3C295
-Hercules A
-3C353
-3C380
-Cygnus A
-3C444
-Cassiopeia A
+* J0133-3629
+* 3C48
+* Fornax A
+* 3C123
+* J0444-2809
+* 3C138
+* Pictor A
+* Taurus A
+* 3C147
+* 3C196
+* Hydra A
+* Virgo A
+* 3C286
+* 3C295
+* Hercules A
+* 3C353
+* 3C380
+* Cygnus A
+* 3C444
+* Cassiopeia A
 
-Example:
+## Example:
 
 ./flux_densities.py Cassiopeia A
 
