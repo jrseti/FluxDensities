@@ -10,8 +10,8 @@ Note that νG is the frequency in GHz.
 log(S) = a0 + a1 log(νG) + a2[log(νG)]2 + a3[log(νG)]3 + · · ·
 
 This project is also an exercise in creating a data set and also
-displaying the data as a graph, automatically popping up a new
-page in the user's default browser.
+displaying the data as an interactive graph, automatically popping 
+up a new page in the user's default browser.
 
 Highcharts (https://www.highcharts.com/) is used to create the graph.
 
@@ -42,8 +42,12 @@ The following sources can be specified:
 
 ./flux_densities.py Cassiopeia A
 
-This image should pop up in your browser:
+This interactive graph should pop up in your browser:
 
 ![""](images/casa_flux.png "Cassiopeia A Flux Density")
 
   
+./flux_densities.py 3c48 produces:
+
+
+![""](images/3c48_flux.png "3C48 Flux Density")

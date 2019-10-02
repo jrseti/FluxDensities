@@ -135,7 +135,8 @@ def create_html(coeffs):
     """
     data = []
     for f in frange(1,10,0.1):
-        d = [float("%.1f"%f), int(get_jy(source, float(f)))]
+        d = [float("%.1f"%f), float("%.4f"%(get_jy(source, float(f))))]
+        print(d)
         data.append(d)
 
     f_out = open("index.html", "w")
