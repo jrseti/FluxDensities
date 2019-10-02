@@ -158,9 +158,11 @@ if len(sys.argv) == 1:
 cmd = sys.argv[1]
 
 if cmd == "-l" or cmd == "-list":
+    # List the sources then exit
     print_sources()
     sys.exit(0)
 else:
+    # For the source calculate the fluxes and create a graph
     source = sys.argv[1]
     for s in sys.argv[2:]:
         source += " " + s
@@ -172,9 +174,9 @@ else:
     for f in frange(1,10,0.5):
         print ("%0.1f, Jy=%.3f" % (f, get_jy(source, float(f))))
 
+    # Create an HTML file to display the results
     create_html(coeffs)
 
-    print("file:/%s/index.html"%os.getcwd())
     # Pop up in a web browser!
     webbrowser.open("file://%s/index.html"%os.getcwd(), 1)
 

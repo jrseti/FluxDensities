@@ -9,9 +9,17 @@ Note that νG is the frequency in GHz.
 
 log(S) = a0 + a1 log(νG) + a2[log(νG)]2 + a3[log(νG)]3 + · · ·
 
+It is important to note that the coefficients a0..a(n) as defined
+in the Perley and Butler paper are each a range of values such as
+1.0440 ± 0.0010. The center value of each coefficient is used for 
+these calculations, ignoring there is a range.
+
 This project is also an exercise in creating a data set and also
 displaying the data as an interactive graph, automatically popping 
 up a new page in the user's default browser.
+
+Note that the graph is interactive and you can mouse over a data point
+and view the exact values in a tooltip.
 
 Highcharts (https://www.highcharts.com/) is used to create the graph.
 
