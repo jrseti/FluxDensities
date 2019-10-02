@@ -14,6 +14,10 @@ in the Perley and Butler paper are each a range of values such as
 1.0440 ± 0.0010. The center value of each coefficient is used for 
 these calculations, ignoring there is a range.
 
+The decline in flux density over time is not taken into account
+for these calculations. Cassiopeia A, for example, is declining
+at a rate of approx 0.4%/year!
+
 This project is also an exercise in creating a data set and also
 displaying the data as an interactive graph, automatically popping 
 up a new page in the user's default browser.
