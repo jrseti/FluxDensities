@@ -125,6 +125,7 @@ def print_help():
         """
         print("\n%s syntax:" % sys.argv[0].replace("./", ""))
         print("\t -l|-list will list all the available sources")
+        print("\t -flux <freq in GHz> <source name> will display the flux for a given frequency")
         print("\t ")
         exit(0)
 
@@ -134,9 +135,9 @@ def create_html(coeffs):
     Create an html page for displaying the data in a graph.
     """
     data = []
-    for f in frange(1,10,0.1):
-        d = [float("%.1f"%f), float("%.4f"%(get_jy(source, float(f))))]
-        print(d)
+    #for f in frange(1,10,0.1):
+    for f in frange(0.06,50,0.005):
+        d = [float("%.4f"%f), float("%.7f"%(get_jy(source, float(f))))]
         data.append(d)
 
     f_out = open("index.html", "w")
@@ -161,18 +162,25 @@ if cmd == "-l" or cmd == "-list":
     # List the sources then exit
     print_sources()
     sys.exit(0)
+if cmd == "-flux":
+    freq = float(sys.argv[2])
+    source = sys.argv[3]
+    for s in sys.argv[4:]:
+        source += " " + s
+    jy = get_jy(source, float(freq))
+    print("%s: %0.3f Jy @ %0.3f GHz" % (source, jy, freq))
 else:
     # For the source calculate the fluxes and create a graph
     source = sys.argv[1]
     for s in sys.argv[2:]:
         source += " " + s
-    print(source)
     coeffs = get_source_coeffs(source)
     if coeffs == None:
         print("Source name not recognized\n")
         sys.exit(1)
-    for f in frange(1,10,0.5):
-        print ("%0.1f, Jy=%.3f" % (f, get_jy(source, float(f))))
+    #for f in frange(1,10,0.5):
+    #for f in frange(0.05,10,0.05):
+    #    print ("%0.1f, Jy=%.3f" % (f, get_jy(source, float(f))))
 
     # Create an HTML file to display the results
     create_html(coeffs)

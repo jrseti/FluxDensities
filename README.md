@@ -48,14 +48,17 @@ The following sources can be specified:
 
 ## Example:
 
-./flux_densities.py Cassiopeia A
+### flux_densities.py -flux 2.0 3c48
+3c48: 12.077 Jy @ 2.000 GHz
+
+### flux_densities.py Cassiopeia A
 
 This interactive graph should pop up in your browser:
 
 ![""](images/casa_flux.png "Cassiopeia A Flux Density")
 
   
-./flux_densities.py 3c48 produces:
+### flux_densities.py 3c48
 
 
 ![""](images/3c48_flux.png "3C48 Flux Density")

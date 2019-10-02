@@ -26,11 +26,13 @@ $(function () {
             text: 'Based on Perley and Butler, 2016: https://arxiv.org/pdf/1609.05940.pdf'
         },
         xAxis: {
+            type:'logarithmic',
             title: {
                 text: 'Frequency in GHz'
             }
         },
         yAxis: {
+            type:'logarithmic',
             title: {
                 text: 'Jy'
             },
@@ -43,7 +45,7 @@ $(function () {
         tooltip: {
             crosshairs: true,
             shared: true,
-            headerFormat: '{point.x:.1f} GHz<br>',
+            headerFormat: '{point.x:.3f} GHz<br>',
             pointFormat: '{point.y} Jy',
         },
         plotOptions: {
