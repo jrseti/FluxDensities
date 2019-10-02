@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<HTML>
+
+<BODY>
+
+<div id="container" style="display:block; margin-left:auto;margin-right: auto; width:600px; height:400px;">$source</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+
+<script>
+
+$(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'spline'
+        },
+        credits: {
+            text: 'jrseti',
+            href: 'https://github.com/jrseti/FluxDensities'
+        },
+        title: {
+            text: 'Flux Density of $source'
+        },
+        subtitle: {
+            text: 'Based on Perley and Butler, 2016: https://arxiv.org/pdf/1609.05940.pdf'
+        },
+        xAxis: {
+            title: {
+                text: 'Frequency in GHz'
+            }
+        },
+        yAxis: {
+            title: {
+                text: 'Jy'
+            },
+            labels: {
+                formatter: function () {
+                    return this.value;
+                }
+            }
+        },
+        tooltip: {
+            crosshairs: true,
+            shared: true,
+            headerFormat: '{point.x:.1f} GHz<br>',
+            pointFormat: '{point.y} Jy',
+        },
+        plotOptions: {
+            spline: {
+                marker: {
+                    radius: 0,
+                    lineColor: '#666666',
+                    lineWidth: 1
+                }
+            }
+        },
+        series: [{
+            name: 'Flux Density of $source',
+            marker: {
+                symbol: 'square'
+            },
+		data: $data
+        }]
+    });
+});
+
+</script>
+</BODY>
+
+</HTML>
