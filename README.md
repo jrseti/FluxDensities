@@ -44,6 +44,6 @@ Example:
 
 This image should pop up in your browser:
 
-![""](https://github.com/jrseti/FluxDensities/images/casa_flux.png "Cassiopeia A Flux Density")
+![""](images/casa_flux.png "Cassiopeia A Flux Density")
 
   
